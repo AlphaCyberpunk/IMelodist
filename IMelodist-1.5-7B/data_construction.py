@@ -294,6 +294,38 @@ def generate_note_audio():
 
     metadata.close()
 
+#def generate_note_audio():
+
+#    os.makedirs('./datasets/abc_audio/wav/notes/', exist_ok=True)
+
+
+#    with open('./datasets/abc_audio/metadata.csv', 'w', encoding='utf-8', newline='') as metadata:
+#        writer = csv.writer(metadata)
+#        writer.writerow(['wav_path', 'abc_notation', 'chord_name'])
+
+#        for i, note in enumerate(all_notes):
+
+#            abc_audio = abc_piece_template.replace('{num}', str(random.randint(1, 100))).replace('{music}', note)
+
+#            midi_path = f'./datasets/abc_audio/temp_{i}.mid'
+#            music_stream = converter.parse(abc_audio, format="abc")
+#            music_stream.write("midi", fp=midi_path)
+
+#            try:
+#                fs = FluidSynth('../assets/default_sound_font.sf2')
+#                audio_path = f'./datasets/abc_audio/wav/notes/{i + 1}.wav'
+#                fs.midi_to_audio(midi_path, audio_path)
+
+#                writer.writerow([os.path.relpath(audio_path, './datasets/abc_audio/'), abc_audio, '-'])
+
+#            except Exception as e:
+#                print(f"Error converting {note} to audio: {e}")
+
+#            finally:
+#                os.remove(midi_path)
+
+#generate_note_audio()
+
 def generate_interval_audio(n: int = 1000):
     """
     generate intervals, steps:
