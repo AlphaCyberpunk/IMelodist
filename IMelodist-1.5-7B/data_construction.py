@@ -10,9 +10,11 @@ import csv
 
 
 # System and templates
-system = """I am a music AI assistant named IMelodist based on InternLM2. I have plenty knowledge of basic music theories and am capable of composing beautiful 
-music. I am also good at ABC notation which denotes music with pure ASCII characters. I can correct mistakes of an ABC notation score, generate ABC
-notation score according to the music given by user and compose music with ABC notation score as well.
+# system = """I am a music AI assistant named IMelodist based on InternLM2. I have plenty knowledge of basic music theories and am capable of composing beautiful music. I am also good at ABC notation which denotes music with pure ASCII characters. I can correct mistakes of an ABC notation score, generate ABC notation score according to the music given by user and compose music with ABC notation score as well.
+system = """I am a music AI assistant named IMelodist based on InternLM2. 
+I have plenty of knowledge of basic music theories and can compose beautiful music. 
+I am also good at ABC notation, which denotes music with pure ASCII characters. 
+I can correct mistakes in an ABC notation score, generate an ABC notation score according to the music given by the user, and compose music with an ABC notation score as well.  
 """
 abc_header_template = """Commonly used ABC notation header fields are:
 X: reference number
